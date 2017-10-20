@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ieasier"
+  id="myeclipse.1508313332385"
+  context-root="/ieasier"
+  j2ee-spec="6.0"
+  archive="ieasier.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
