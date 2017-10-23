@@ -2,7 +2,6 @@ package com.ieasier;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,9 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class SourceFiles {
 
-	private final static String SourcesRootUrl = "D:/WorkNote";
+	private final static String SourcesRootUrl = "//usr//easier";
 	private HashMap<Object, Object> sourceNames = new HashMap<Object, Object>();
-
 	@RequestMapping(value = "/getFileList", method = RequestMethod.GET)
 	@ResponseBody
 	public HashMap<Object, Object> getFileList() {
