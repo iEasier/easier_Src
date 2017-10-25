@@ -10,30 +10,33 @@
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd 
 		http://cxf.apache.org/jaxws 
    		http://cxf.apache.org/schemas/jaxws.xsd">
-   	<context:component-scan base-package="com.ieasier"></context:component-scan>
-   	 <bean id="message" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	<context:component-scan base-package="com.ieasier"></context:component-scan>
+	<bean id="message"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="defaultEncoding" value="utf-8" />
 		<property name="useCodeAsDefaultMessage" value="true"></property>
 		<property name="basename" value="classpath:message" />
 	</bean>
-	<mvc:resources location="/static/js/" mapping="/static/js/**"/>
-	<bean id="view" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		 <property name="prefix" value="/jsp/"/>  
-     	 <property name="suffix" value=".jsp"/>  
+	<mvc:resources location="/Resource/" mapping="/Resource/**" />
+	<mvc:resources location="/Resources/image/" mapping="/Resources/image/**" />
+	<bean id="view"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/jsp/" />
+		<property name="suffix" value=".jsp" />
 	</bean>
-	 <bean id="mappingJacksonHttpMessageConverter"
-          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-        <property name="supportedMediaTypes">
-            <list>
-                <value>application/json;charset=UTF-8</value>
-            </list>
-        </property>
-    </bean>
-    
-    <mvc:annotation-driven>
-   		<mvc:message-converters>
-       		 <ref bean="mappingJacksonHttpMessageConverter"></ref>
-    	</mvc:message-converters>
+	<bean id="mappingJacksonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<ref bean="mappingJacksonHttpMessageConverter"></ref>
+		</mvc:message-converters>
 	</mvc:annotation-driven>
-  
- </beans>
+
+</beans>
