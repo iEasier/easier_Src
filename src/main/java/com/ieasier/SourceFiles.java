@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class SourceFiles {
 
-	private final static String SourcesRootUrl = "//usr//easier";
+	private final static String SourcesRootUrl = "/usr/local/tomcat/webapps/ieasier/Resources";
 	private HashMap<Object, Object> sourceNames = new HashMap<Object, Object>();
 	@RequestMapping(value = "/getFileList", method = RequestMethod.GET)
 	@ResponseBody

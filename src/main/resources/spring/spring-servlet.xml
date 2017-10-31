@@ -17,7 +17,7 @@
 		<property name="useCodeAsDefaultMessage" value="true"></property>
 		<property name="basename" value="classpath:message" />
 	</bean>
-	<mvc:resources location="/Resource/" mapping="/Resource/**" />
+	<mvc:resources location="/Resources/" mapping="/Resources/**" />
 	<mvc:resources location="/Resources/image/" mapping="/Resources/image/**" />
 	<bean id="view"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
