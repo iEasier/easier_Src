@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ieasier.tools.Config;
+
 @Controller
 public class SourceFiles {
 
-	private final static String SourcesRootUrl = "/usr/local/tomcat/webapps/ieasier/Resources";
+	private final static String SourcesRootUrl = new Config().SOURCES_ROOTURL;
 	private HashMap<Object, Object> sourceNames = new HashMap<Object, Object>();
 	@RequestMapping(value = "/getFileList", method = RequestMethod.GET)
 	@ResponseBody

@@ -6,12 +6,13 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
+import com.ieasier.tools.Config;
 import com.ieasier.tools.TurnUnit;
 
 public class SourceFilesContent {
 	private static HashMap<Object, Object> sources = new HashMap<Object, Object>();
 	static Logger logger = Logger.getLogger(SourceFiles.class);
-	private static String DOWNLOAD_PATH = "http://192.168.183.128:8080/ieasier/Resources/";
+	private static String DOWNLOAD_PATH = new Config().DOWNLOAD_PATH;
 
 	public ArrayList<Object> getSourceContents(String path) {
 		ArrayList<Object> parentfileName = new ArrayList<Object>();
